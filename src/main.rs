@@ -122,7 +122,7 @@ fn main() {
                             <div class="flex flex-row border-2 divide-x-2 grow min-w-0">
                                 <div class="px-2 py-0.5">"status: prealpha"</div>
                                 <div class="grow min-w-0" />
-                                <Button text="info" href="" />
+                                <Button text="info" href="/info" />
                                 <Button text="manual" href="" />
                                 <Button text="try/buy" href="" />
                             </div>
@@ -130,7 +130,9 @@ fn main() {
                             <Button text="B" href="" />
                         </div>
                         <div class="flex flex-row w-full gap-5 items-center px-2">
-                            <div class="text-2xl ml-2">pyon3d</div>
+                            <a class="text-2xl ml-2" href="/">
+                                pyon3d
+                            </a>
                             <div>a comfy 3d editor</div>
                             <div class="grow min-w-0" />
                             <a

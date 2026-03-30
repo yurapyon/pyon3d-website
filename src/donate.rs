@@ -13,15 +13,13 @@ pub fn Donate() -> impl IntoView {
                 "I've been making art for a long time and I want to build the kind of tools that would've helped me when I was just starting out. "
                 "The systems we live under do not afford the time necessary to learn massive enigmas of software. "
                 "We need a future where its easy and fun to share your ideas. "
-            // "We need to " <span class="italic">actually</span> " democratize art. "
-            // "Not just pretend we are by giving money to billionarie sex-fiends who only want to make you dumber. "
             </div>
             <div class="w-full">
                 "I'm currently unemployed due to the AI craze and devaluing of quality human-made work :-) "
-                "There's no possible way I could make this happen without some monetary support. "
+                "There's no possible way I could make this happen without monetary support. "
                 "If you want to contribute to this project's future, I have Kofi and Patreon links below. "
-                "I'm also looking for long-term sponsors or grants! "
-                "If you have any info about that kind of stuff, you can email me at "
+                "Outside of that I'm looking for formal sponsorships or grants! Or even a job! "
+                "If you have any info about that kind of stuff, you can email me at _TBD_ "
             </div>
             <div class="w-full">
                 "I have big dreams and want to take this project as far as I can! "
