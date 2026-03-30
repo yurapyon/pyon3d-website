@@ -179,12 +179,6 @@
   .relative {
     position: relative;
   }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
-  .left-1 {
-    left: calc(var(--spacing) * 1);
-  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -260,8 +254,11 @@
   .gap-1 {
     gap: calc(var(--spacing) * 1);
   }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
@@ -299,17 +296,20 @@
   .object-fill {
     object-fit: fill;
   }
-  .p-1 {
-    padding: calc(var(--spacing) * 1);
-  }
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
   }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
   }
   .py-0\.5 {
     padding-block: calc(var(--spacing) * 0.5);
+  }
+  .pt-1 {
+    padding-top: calc(var(--spacing) * 1);
+  }
+  .pb-1 {
+    padding-bottom: calc(var(--spacing) * 1);
   }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
@@ -331,6 +331,9 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
   }
   .text-black {
     color: var(--color-black);
