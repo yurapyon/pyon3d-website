@@ -39,6 +39,12 @@ pub fn Info() -> impl IntoView {
                         <br />
                         "Maybe not... but parts of it may be turned into an open-source library and shared"
                     </div>
+                    <div>
+                        <span class="italic">"What tech does the pyon3d use? "</span>
+                        <br />
+                        "pyon3d is written in Rust! There is a custom UI engine made with hecs and kasuari, "
+                        "parry helps with collisions, and the graphics are SDL2 and OpenGL."
+                    </div>
                 </div>
             </div>
             <div class="flex flex-col">

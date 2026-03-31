@@ -69,6 +69,7 @@ fn Feature<'a>(title: &'a str, children: Children) -> impl IntoView {
 fn Home() -> impl IntoView {
     // TODO choose a random logo on page refresh
     view! {
+        <div class="flex flex-col gap-3">
         <div class="flex flex-row w-full aspect-video bg-black text-white relative">
             <div class="absolute bg-yellow-500 text-black px-2 py-0.5 bottom-3 right-3 z-10">
                 "NOTE: Not a real screenshot of pyon3d"
@@ -95,6 +96,7 @@ fn Home() -> impl IntoView {
                 </div>
             </div>
         </div>
+        </div>
     }
 }
 
@@ -116,8 +118,11 @@ fn main() {
     leptos::mount::mount_to_body(|| {
         view! {
             <Router>
-                <div class="w-screen h-screen flex flex-col items-center font-sans relative overflow-clip">
-                    <img src="ilp.jpg" class="absolute top-0 left-0 w-full -z-10 brightness-90 contrast-90" />
+                <div class="w-screen h-screen flex flex-col items-center font-sans relative">
+                    <img
+                        src="ilp.jpg"
+                        class="absolute top-0 left-0 w-full -z-10 brightness-90 contrast-90"
+                    />
                     <div class="bg-[#e0e0e0] max-w-[800px] min-h-full flex flex-col gap-3">
                         <div class="flex flex-row gap-2 px-1 pt-1">
                             <div class="flex flex-row border-2 divide-x-2 grow min-w-0">
@@ -143,11 +148,13 @@ fn main() {
                                 donate
                             </a>
                         </div>
+                        <div class="overflow-scroll">
                         <Routes fallback=|| "Not found.">
                             <Route path=path!("/") view=Home />
                             <Route path=path!("/info") view=Info />
                             <Route path=path!("/donate") view=Donate />
                         </Routes>
+                        </div>
                         <div class="grow min-h-0" />
                         <div class="w-full text-center pb-1">
                             made with love by a human in Chicago {" 🌭 "}(c) pyondotmoe 2026

@@ -303,8 +303,8 @@
       border-inline-end-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
     }
   }
-  .overflow-clip {
-    overflow: clip;
+  .overflow-scroll {
+    overflow: scroll;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
