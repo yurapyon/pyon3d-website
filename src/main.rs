@@ -38,7 +38,7 @@ use info::Info;
 fn Button<'a>(text: &'a str, href: &'a str) -> impl IntoView {
     view! {
         // <button class="px-2 py-0.5 text-center">{text}</button>
-        // 
+        //
         <a
             class="px-2 py-0.5"
             // [
@@ -116,7 +116,8 @@ fn main() {
     leptos::mount::mount_to_body(|| {
         view! {
             <Router>
-                <div class="w-screen h-screen flex flex-col items-center font-sans">
+                <div class="w-screen h-screen flex flex-col items-center font-sans relative overflow-clip">
+                    <img src="ilp.jpg" class="absolute top-0 left-0 w-full -z-10 brightness-90 contrast-90" />
                     <div class="bg-[#e0e0e0] max-w-[800px] min-h-full flex flex-col gap-3">
                         <div class="flex flex-row gap-2 px-1 pt-1">
                             <div class="flex flex-row border-2 divide-x-2 grow min-w-0">
@@ -149,7 +150,7 @@ fn main() {
                         </Routes>
                         <div class="grow min-h-0" />
                         <div class="w-full text-center pb-1">
-                            made with love by humans in Chicago {" 🌭 "}(c) pyondotmoe 2026
+                            made with love by a human in Chicago {" 🌭 "}(c) pyondotmoe 2026
                         </div>
                     </div>
                 </div>
