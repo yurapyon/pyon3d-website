@@ -38,9 +38,9 @@ use info::Info;
 fn Button<'a>(text: &'a str, href: &'a str) -> impl IntoView {
     view! {
         // <button class="px-2 py-0.5 text-center">{text}</button>
-        // 
+        //
         <a
-            class="px-2 py-0.5"
+            class="px-2 py-0.5 hover:bg-black hover:text-white"
             // [
             // props.deactivated
             // ? "font-bold bg-lmn-slate text-white pointer-events-none cursor-default"
@@ -135,23 +135,34 @@ fn main() {
                                 <Button text="manual" href="" />
                                 <Button text="try/buy" href="" />
                             </div>
-                            <Button text="P" href="" />
-                            <Button text="B" href="" />
+                            <div class="flex flex-row items-center gap-2">
+                                <a class="w-[20px]" href="/">
+                                    <img class="brightness-0" src="patreon_logo.png" />
+                                </a>
+                                <a class="w-[20px]" href="https://bsky.app/profile/pyon3d.com" target="_blank">
+                                    <img class="brightness-0" src="bsky_logo.png" />
+                                </a>
+                            </div>
                         </div>
                         <div class="flex flex-row w-full gap-5 items-center px-2">
-                            <a class="text-2xl ml-2" href="/">
-                                pyon3d
+                            <a class="text-2xl ml-2 w-[100px] group" href="/">
+                                <img
+                                    class="group-hover:block hidden"
+                                    src="color_logo.png"
+                                    alt="pyon3d"
+                                />
+                                <img class="group-hover:hidden" src="logo.png" alt="pyon3d" />
                             </a>
-                            <div>a comfy 3d editor</div>
+                            <div>"a comfy low-poly editor"</div>
                             <div class="grow min-w-0" />
                             <a
-                                class="text-white bg-blue-500 rounded-full px-2 py-0.5"
+                                class="text-white bg-blue-500 rounded-full px-2 py-0.5 hover:bg-blue-600"
                                 href="/donate"
                             >
                                 donate
                             </a>
                         </div>
-                        <div class="overflow-scroll">
+                        <div class="overflow-y-auto">
                             <Routes fallback=|| "Not found.">
                                 <Route path=path!("/") view=Home />
                                 <Route path=path!("/info") view=Info />
