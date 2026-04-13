@@ -68,7 +68,8 @@ fn Home() -> impl IntoView {
                         "Preview shaders and scripts live. Automatically reload assets as you work on them. "
                     </Feature>
                     <Feature title="Not slop">
-                        "Quality over quantity. Aim to be responsive to bug reports and requests."
+                        "Quality over quantity. Aim to be responsive to bug reports and requests. "
+                        "Human-made everything, no GenAI. "
                     </Feature>
                 </div>
                 <div class="flex flex-row bg-[#c0c0c0]">
