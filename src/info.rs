@@ -5,17 +5,17 @@ use leptos::prelude::*;
 #[component]
 pub fn Info() -> impl IntoView {
     view! {
-        <div class="flex flex-col gap-4 px-6 py-1">
+        <div class="flex flex-col gap-3 px-6 py-1">
             <div class="flex flex-col">
-                <div class="font-semibold">Info</div>
-                <div class="text-sm">
+                <div class="font-semibold bg-pyon-blue-mid px-2 py-0.5">Info</div>
+                <div class="text-sm border border-pyon-blue-mid border-t-0 px-2 pt-1 pb-2">
                     "pyon3d is a 3d model editor with the goal of making low\u{2011}poly modelling "
                     "as natural and easy as 2d art or digital sculpting. "
                 </div>
             </div>
             <div class="flex flex-col">
-                <div class="font-semibold">Questions</div>
-                <div class="flex flex-col gap-2 text-sm">
+                <div class="font-semibold bg-pyon-green-mid px-2 py-0.5">Questions</div>
+                <div class="flex flex-col gap-2 text-sm border border-pyon-green-mid border-t-0 px-2 pt-1 pb-2">
                     <div>
                         <span class="italic">"Who is the team?"</span>
                         <br />
@@ -57,32 +57,40 @@ pub fn Info() -> impl IntoView {
                 </div>
             </div>
             <div class="flex flex-col">
-                <div class="font-semibold">AI statement</div>
-                <div class="flex flex-col gap-2 text-sm">
-                    <div>This is a <span class="font-semibold">" no AI zone"</span></div>
-                    <div>
-                        <span class="underline">
-                            "Generative AI tools are not used in developing the app"
-                        </span>
-                        <ul class="list-disc list-inside">
-                            <li>"Not for writing code"</li>
-                            <li>"Not for planning/internal operations"</li>
-                            <li>"Not for research"</li>
-                            <li>"Not even for making this website"</li>
-                        </ul>
+                <div class="flex flex-row bg-pyon-red-mid px-2 py-0.5 items-center">
+                    <div class="font-semibold text-base">AI statement</div>
+                    <div class="grow min-w-0" />
+                    <div class="text-sm">
+                        This is a <span class="font-semibold">" no AI zone"</span>
                     </div>
-                    <div>
-                        <span class="underline">
-                            "Generative AI tools will not be integrated into the app out\u{2011}of\u{2011}the\u{2011}box"
-                        </span>
-                        <br />
-                        " I'm planning on adding a plugin system in the future, "
-                        "so you can do whatever you want, but third-party AI plugins will never be endorsed by Pyon3D"
+                </div>
+                <div class="grid grid-cols-[auto_40%] text-sm border border-pyon-red-mid border-t-0 px-2 pt-1 pb-2 gap-2">
+                    <div class="flex flex-col gap-2">
+                        <div>
+                            <div class="underline">
+                                "Generative AI tools are not used in developing the app"
+                            </div>
+                            <ul class="list-disc list-inside">
+                                <li>"Not for writing code"</li>
+                                <li>"Not for planning/internal operations"</li>
+                                <li>"Not for research"</li>
+                                <li>"Not even for making this website"</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="underline">
+                                "Generative AI tools will not be integrated into the app by default"
+                            </div>
+                            <div class="">
+                                " I'm planning on adding a plugin system in the future, "
+                                "so you can do whatever you want, but third-party AI plugins will never be endorsed by Pyon3D"
+                            </div>
+                        </div>
                     </div>
-                    <div>
+                    <div class="rounded-lg bg-pyon-yellow-light px-2 py-1 self-start">
                         "Humans have been making things for hundreds of thousands of years without "
-                        "needing to ask billionaire sex\u{2011}fiends with no friends "
-                        "or Mark\u{2011}fucking\u{2011}Zuckerburg for permission. "
+                        "needing to ask billionaire sex fiends with no friends "
+                        "or Mark-fucking-Zuckerburg for permission. "
                         <div class="italic mt-0.5 ml-1">"Heres to a hundred thousand more!"</div>
                     </div>
                 </div>

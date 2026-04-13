@@ -23,7 +23,7 @@ fn Link<'a>(text: &'a str, href: &'a str, deactivated: bool) -> impl IntoView {
         if deactivated {
             "hover:bg-[#707070] hover:text-[#c0c0c0] cursor-not-allowed"
         } else {
-            "hover:bg-black hover:text-white"
+            "hover:bg-pyon-black hover:text-pyon-white"
         }
     );
 
@@ -35,22 +35,12 @@ fn Link<'a>(text: &'a str, href: &'a str, deactivated: bool) -> impl IntoView {
 }
 
 #[component]
-fn Feature<'a>(title: &'a str, children: Children) -> impl IntoView {
-    view! {
-        <div class="flex flex-col w-full h-full bg-[#b0b0b0]">
-            <div class="font-semibold px-1">{title}</div>
-            <div class="bg-[#c0c0c0] h-full text-sm px-1 pb-2">{children()}</div>
-        </div>
-    }
-}
-
-#[component]
 fn Home() -> impl IntoView {
     // TODO choose a random logo on page refresh
     view! {
         <div class="flex flex-col gap-3">
-            <div class="flex flex-row w-full aspect-video bg-black text-white relative">
-                <div class="absolute bg-yellow-500 text-black px-2 py-0.5 bottom-3 right-3 z-10">
+            <div class="flex flex-row w-full aspect-video bg-pyon-black relative">
+                <div class="absolute bg-yellow-500 text-pyon-black px-2 py-0.5 bottom-3 right-3 z-10">
                     "NOTE: Not a real screenshot of pyon3d"
                 </div>
                 <img
@@ -59,25 +49,28 @@ fn Home() -> impl IntoView {
                 />
             </div>
             <div class="w-full px-3 flex flex-col gap-2">
-                <div class="grid grid-cols-3 gap-1">
-                    <Feature title="Chill experience">
+                <div class="grid grid-cols-3 gap-x-1">
+                    <div class="font-semibold px-1 bg-pyon-blue-mid">Chill experience</div>
+                    <div class="font-semibold px-1 bg-pyon-green-mid">For gamedev and art</div>
+                    <div class="font-semibold px-1 bg-pyon-red-mid">Not slop</div>
+                    <div class="bg-pyon-blue-light text-sm px-1 pb-2">
                         "\"Sculpting for low-poly\". Workflow inspried by 2D art tools. "
                         "Clean UIX. Good documentation. "
-                    </Feature>
-                    <Feature title="For gamedev and art">
+                    </div>
+                    <div class="bg-pyon-green-light text-sm px-1 pb-2">
                         "Preview shaders and scripts live. Automatically reload assets as you work on them. "
-                    </Feature>
-                    <Feature title="Not slop">
+                    </div>
+                    <div class="bg-pyon-red-light text-sm px-1 pb-2">
                         "Quality over quantity. Aim to be responsive to bug reports and requests. "
                         "Human-made everything, no GenAI. "
-                    </Feature>
+                    </div>
                 </div>
-                <div class="flex flex-row bg-[#c0c0c0]">
-                    <div class="bg-[#b0b0b0] px-1 font-semibold flex flex-row items-center">
+                <div class="flex flex-row bg-pyon-yellow-light">
+                    <div class="bg-pyon-yellow-mid px-1 font-semibold flex flex-row items-center">
                         Roadmap
                     </div>
                     <div class="grow min-w-0 px-1 text-sm h-full flex flex-row items-center">
-                        "multilanguage support, high-poly modelling tools, iOS/android/tablet support, plugin system, themable UI"
+                        "multilanguage support, high-poly modelling tools, iOS/android/tablet, plugin system, themable UI"
                     </div>
                 </div>
             </div>
@@ -100,14 +93,14 @@ fn main() {
     leptos::mount::mount_to_body(|| {
         view! {
             <Router>
-                <div class="w-screen h-screen flex flex-col items-center font-sans relative overflow-clip">
+                <div class="w-screen h-screen flex flex-col items-center font-sans relative overflow-clip text-pyon-black">
                     <img
                         src="ilp.jpg"
                         class="absolute top-0 left-0 w-full -z-10 brightness-90 contrast-90"
                     />
-                    <div class="bg-[#e0e0e0] max-w-[800px] min-h-full flex flex-col gap-3">
+                    <div class="bg-pyon-white max-w-[800px] min-h-full flex flex-col gap-3">
                         <div class="flex flex-row gap-2 px-1 pt-1">
-                            <div class="flex flex-row border-2 divide-x-2 divide-black grow min-w-0">
+                            <div class="flex flex-row border-2 divide-x-2 divide-pyon-black grow min-w-0">
                                 <div class="px-2 py-0.5 select-none">"status: prealpha"</div>
                                 <div class="grow min-w-0" />
                                 <Link text="info" href="/info" deactivated=false />
@@ -139,7 +132,7 @@ fn main() {
                             <div>"a comfy low-poly editor"</div>
                             <div class="grow min-w-0" />
                             <a
-                                class="text-white bg-blue-500 rounded-full px-2 py-0.5 hover:bg-blue-600"
+                                class="text-white bg-pyon-blue-mid rounded-full px-2 py-0.5 hover:bg-pyon-blue-dark"
                                 href="/donate"
                             >
                                 donate
@@ -154,7 +147,7 @@ fn main() {
                         </div>
                         <div class="grow min-h-0" />
                         <div class="w-full text-center pb-1">
-                            made with love by a person in Chicago {" 🌭 "}(c) pyondotmoe 2026
+                            made with love by a person in Chicago {" 🌭 © "}pyondotmoe 2026
                         </div>
                     </div>
                 </div>

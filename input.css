@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+  --color-pyon-black: rgb( 20  20  20);
+  --color-pyon-white: rgb(238 237 231);
+  --color-pyon-blue-light: rgb(112 185 241);
+  --color-pyon-blue-mid:   rgb( 68 160 241);
+  --color-pyon-blue-dark:  rgb( 77 134 206);
+  --color-pyon-green-light: rgb(157 227 145);
+  --color-pyon-green-mid:   rgb(116 222 114);
+  --color-pyon-green-dark:  rgb(115 205 103);
+  --color-pyon-red-light: rgb(245 143 143);
+  --color-pyon-red-mid:   rgb(243  91  91);
+  --color-pyon-red-dark:  rgb(206  85  80);
+  --color-pyon-yellow-light: rgb(246 224 132);
+  --color-pyon-yellow-mid:   rgb(242 207  84);
+  --color-pyon-yellow-dark:  rgb(234 193  73);
+  --color-pyon-g-5: rgb(253 205  61);
+  --color-pyon-g-4: rgb(249 189  69);
+  --color-pyon-g-3: rgb(247 167  92);
+  --color-pyon-g-2: rgb(243 146 125);
+  --color-pyon-g-1: rgb(243 152 207);
+}

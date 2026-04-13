@@ -8,19 +8,31 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
     --color-yellow-500: oklch(79.5% 0.184 86.047);
-    --color-blue-500: oklch(62.3% 0.214 259.815);
-    --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-semibold: 600;
+    --radius-lg: 0.5rem;
     --aspect-video: 16 / 9;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-pyon-black: rgb( 20  20  20);
+    --color-pyon-white: rgb(238 237 231);
+    --color-pyon-blue-light: rgb(112 185 241);
+    --color-pyon-blue-mid: rgb( 68 160 241);
+    --color-pyon-blue-dark: rgb( 77 134 206);
+    --color-pyon-green-light: rgb(157 227 145);
+    --color-pyon-green-mid: rgb(116 222 114);
+    --color-pyon-red-light: rgb(245 143 143);
+    --color-pyon-red-mid: rgb(243  91  91);
+    --color-pyon-yellow-light: rgb(246 224 132);
+    --color-pyon-yellow-mid: rgb(242 207  84);
   }
 }
 @layer base {
@@ -175,9 +187,6 @@
   .absolute {
     position: absolute;
   }
-  .fixed {
-    position: fixed;
-  }
   .relative {
     position: relative;
   }
@@ -198,24 +207,6 @@
   }
   .z-10 {
     z-index: 10;
-  }
-  .container {
-    width: 100%;
-    @media (width >= 40rem) {
-      max-width: 40rem;
-    }
-    @media (width >= 48rem) {
-      max-width: 48rem;
-    }
-    @media (width >= 64rem) {
-      max-width: 64rem;
-    }
-    @media (width >= 80rem) {
-      max-width: 80rem;
-    }
-    @media (width >= 96rem) {
-      max-width: 96rem;
-    }
   }
   .mt-0\.5 {
     margin-top: calc(var(--spacing) * 0.5);
@@ -286,6 +277,9 @@
   .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  .grid-cols-\[auto_40\%\] {
+    grid-template-columns: auto 40%;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -298,20 +292,17 @@
   .justify-center {
     justify-content: center;
   }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
-  }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
-  }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
+  }
+  .gap-x-1 {
+    column-gap: calc(var(--spacing) * 1);
   }
   .divide-x-2 {
     :where(& > :not(:last-child)) {
@@ -321,10 +312,13 @@
       border-inline-end-width: calc(2px * calc(1 - var(--tw-divide-x-reverse)));
     }
   }
-  .divide-black {
+  .divide-pyon-black {
     :where(& > :not(:last-child)) {
-      border-color: var(--color-black);
+      border-color: var(--color-pyon-black);
     }
+  }
+  .self-start {
+    align-self: flex-start;
   }
   .overflow-clip {
     overflow: clip;
@@ -335,24 +329,62 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .bg-\[\#b0b0b0\] {
-    background-color: #b0b0b0;
+  .border-t-0 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 0px;
   }
-  .bg-\[\#c0c0c0\] {
-    background-color: #c0c0c0;
+  .border-pyon-blue-mid {
+    border-color: var(--color-pyon-blue-mid);
   }
-  .bg-\[\#e0e0e0\] {
-    background-color: #e0e0e0;
+  .border-pyon-green-mid {
+    border-color: var(--color-pyon-green-mid);
+  }
+  .border-pyon-red-mid {
+    border-color: var(--color-pyon-red-mid);
   }
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-blue-500 {
-    background-color: var(--color-blue-500);
+  .bg-pyon-black {
+    background-color: var(--color-pyon-black);
+  }
+  .bg-pyon-blue-light {
+    background-color: var(--color-pyon-blue-light);
+  }
+  .bg-pyon-blue-mid {
+    background-color: var(--color-pyon-blue-mid);
+  }
+  .bg-pyon-green-light {
+    background-color: var(--color-pyon-green-light);
+  }
+  .bg-pyon-green-mid {
+    background-color: var(--color-pyon-green-mid);
+  }
+  .bg-pyon-red-light {
+    background-color: var(--color-pyon-red-light);
+  }
+  .bg-pyon-red-mid {
+    background-color: var(--color-pyon-red-mid);
+  }
+  .bg-pyon-white {
+    background-color: var(--color-pyon-white);
+  }
+  .bg-pyon-yellow-light {
+    background-color: var(--color-pyon-yellow-light);
+  }
+  .bg-pyon-yellow-mid {
+    background-color: var(--color-pyon-yellow-mid);
   }
   .bg-yellow-500 {
     background-color: var(--color-yellow-500);
@@ -397,6 +429,10 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -405,8 +441,8 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .text-black {
-    color: var(--color-black);
+  .text-pyon-black {
+    color: var(--color-pyon-black);
   }
   .text-white {
     color: var(--color-white);
@@ -462,17 +498,17 @@
       }
     }
   }
-  .hover\:bg-black {
+  .hover\:bg-pyon-black {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-black);
+        background-color: var(--color-pyon-black);
       }
     }
   }
-  .hover\:bg-blue-600 {
+  .hover\:bg-pyon-blue-dark {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-blue-600);
+        background-color: var(--color-pyon-blue-dark);
       }
     }
   }
@@ -483,10 +519,10 @@
       }
     }
   }
-  .hover\:text-white {
+  .hover\:text-pyon-white {
     &:hover {
       @media (hover: hover) {
-        color: var(--color-white);
+        color: var(--color-pyon-white);
       }
     }
   }
