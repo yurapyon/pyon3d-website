@@ -49,7 +49,7 @@ fn Home() -> impl IntoView {
                 />
             </div>
             <div class="w-full px-3 flex flex-col gap-2">
-                <div class="grid grid-cols-3 gap-x-1">
+                <div class="grid grid-cols-3 gap-x-1.5">
                     <div class="font-semibold px-1 bg-pyon-blue-mid">Chill experience</div>
                     <div class="font-semibold px-1 bg-pyon-green-mid">For gamedev and art</div>
                     <div class="font-semibold px-1 bg-pyon-red-mid">Not slop</div>
@@ -65,14 +65,16 @@ fn Home() -> impl IntoView {
                         "Human-made everything, no GenAI. "
                     </div>
                 </div>
-                <div class="flex flex-row bg-pyon-yellow-light">
+                <div class="flex flex-row">
                     <div class="bg-pyon-yellow-mid px-1 font-semibold flex flex-row items-center">
-                        Roadmap
+                        Note
                     </div>
-                    <div class="grow min-w-0 px-1 text-sm h-full flex flex-row items-center">
-                        "multilanguage support, high-poly modelling tools, iOS/android/tablet, plugin system, themable UI"
+                    <div class="grow min-w-0 px-1 pb-0.5 text-sm h-full flex flex-row items-center border border-pyon-yellow-mid">
+                        "pyon3D is still in a very early stage, and a demo is not yet available. "
+                        <br /> "Updates will be posted on Patreon and Bluesky."
                     </div>
                 </div>
+
             </div>
         </div>
     }
@@ -104,15 +106,14 @@ fn main() {
                                 <div class="px-2 py-0.5 select-none">"status: prealpha"</div>
                                 <div class="grow min-w-0" />
                                 <Link text="info" href="/info" deactivated=false />
-                                <Link text="manual" href="" deactivated=true />
-                                <Link text="try/buy" href="" deactivated=true />
+
                             </div>
-                            <div class="flex flex-row items-center gap-2">
+                            <div class="flex flex-row items-center gap-2 pr-1">
                                 <a class="w-[20px]" href="/">
                                     <img class="brightness-0" src="patreon_logo.png" />
                                 </a>
                                 <a
-                                    class="w-[20px]"
+                                    class="w-[24px]"
                                     href="https://bsky.app/profile/pyon3d.com"
                                     target="_blank"
                                 >

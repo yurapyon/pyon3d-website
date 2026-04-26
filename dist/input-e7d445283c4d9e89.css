@@ -187,6 +187,9 @@
   .absolute {
     position: absolute;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
   }
@@ -207,6 +210,24 @@
   }
   .z-10 {
     z-index: 10;
+  }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
   }
   .mt-0\.5 {
     margin-top: calc(var(--spacing) * 0.5);
@@ -246,6 +267,9 @@
   }
   .w-\[20px\] {
     width: 20px;
+  }
+  .w-\[24px\] {
+    width: 24px;
   }
   .w-\[100px\] {
     width: 100px;
@@ -301,8 +325,8 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
-  .gap-x-1 {
-    column-gap: calc(var(--spacing) * 1);
+  .gap-x-1\.5 {
+    column-gap: calc(var(--spacing) * 1.5);
   }
   .divide-x-2 {
     :where(& > :not(:last-child)) {
@@ -352,6 +376,9 @@
   }
   .border-pyon-red-mid {
     border-color: var(--color-pyon-red-mid);
+  }
+  .border-pyon-yellow-mid {
+    border-color: var(--color-pyon-yellow-mid);
   }
   .bg-black {
     background-color: var(--color-black);
@@ -413,6 +440,12 @@
   .pt-1 {
     padding-top: calc(var(--spacing) * 1);
   }
+  .pr-1 {
+    padding-right: calc(var(--spacing) * 1);
+  }
+  .pb-0\.5 {
+    padding-bottom: calc(var(--spacing) * 0.5);
+  }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
   }
@@ -443,6 +476,9 @@
   }
   .text-pyon-black {
     color: var(--color-pyon-black);
+  }
+  .text-pyon-white {
+    color: var(--color-pyon-white);
   }
   .text-white {
     color: var(--color-white);
@@ -509,6 +545,20 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-pyon-blue-dark);
+      }
+    }
+  }
+  .hover\:bg-pyon-blue-mid {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-pyon-blue-mid);
+      }
+    }
+  }
+  .hover\:bg-pyon-red-mid {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-pyon-red-mid);
       }
     }
   }

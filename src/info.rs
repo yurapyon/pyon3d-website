@@ -50,12 +50,13 @@ pub fn Info() -> impl IntoView {
                     <div>
                         <span class="italic">"What tech does pyon3d use? "</span>
                         <br />
-                        "pyon3d is written in Rust! It's event-based overall, using Tokio. "
+                        "pyon3d is written in Rust! It's event-based overall, using kameo. "
                         "Theres a custom UI engine using kasuari. For now the graphics is SDL3 and OpenGL, "
                         "but it's planned to move to wgpu in the future. "
                     </div>
                 </div>
             </div>
+
             <div class="flex flex-col">
                 <div class="flex flex-row bg-pyon-red-mid px-2 py-0.5 items-center">
                     <div class="font-semibold text-base">AI statement</div>

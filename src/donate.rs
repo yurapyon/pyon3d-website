@@ -21,9 +21,22 @@ pub fn Donate() -> impl IntoView {
                 "Outside of that I'm looking for formal sponsorships or grants! Or even a job! "
                 "If you have any info about that kind of stuff, you can contact me on Bluesky."
             </div>
-            <div>
-                "I have big dreams and want to make a positve impact on... something! " <br />
-                "Let's do this! "
+            <div>"I have big dreams and want to make a positve impact... " "Let's do this! "</div>
+            <div class="flex flex-row gap-2">
+                <a
+                    class="rounded-full bg-pyon-black text-pyon-white px-2 py-0.5 hover:bg-pyon-blue-mid"
+                    href="/"
+                    target="_blank"
+                >
+                    Patreon
+                </a>
+                <a
+                    class="rounded-full bg-pyon-black text-pyon-white px-2 py-0.5 hover:bg-pyon-red-mid"
+                    href="https://bsky.app/profile/pyon3d.com"
+                    target="_blank"
+                >
+                    Bluesky
+                </a>
             </div>
         </div>
     }
